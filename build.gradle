@@ -17,8 +17,11 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'io.r2dbc:r2dbc-h2:1.0.0.RELEASE'
+	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
 	runtimeOnly 'com.h2database:h2'
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
 
